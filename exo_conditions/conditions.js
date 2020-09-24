@@ -2,7 +2,7 @@
 **Exerice 1
 */
 
-var age = window.prompt("Age ??");
+var age = parseInt(window.prompt("Age ??"));
 
 if (age < 18){
 	window.alert("Vous etes trop jeunes vous avez " + age);
@@ -16,7 +16,7 @@ if (age < 18){
 **Exerice 2
 */
 
-var rand = Math.floor(Math.random()*30)+1;
+var rand = Math.floor(Math.random()*31);
 console.log(rand);
 if (rand<=10){
 	console.log("Cool");
@@ -30,10 +30,10 @@ if (rand<=10){
 **Exerice 3
 */
 
-var d = new Date();
-var n = d.getDay();
+var date = new Date();
+var getDay = date.getDay();
 
-switch(n){
+switch(getDay){
 	case 1 :
 		console.log("Il est Lundi...");
 		break;
@@ -45,15 +45,14 @@ switch(n){
 		break;
 	case 4 : 
 		console.log("Il est jeudi");
-		break;
 	case 5 :
 		console.log("Il est vendredi");
-		break;
 	case 6 :
 		console.log("Il est samedi");
 		break;
-	case 7 :
+	case 0 :
 		console.log("Enfin dimanche !");	
+		break;
 }
 
 /*
